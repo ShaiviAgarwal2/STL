@@ -1,0 +1,55 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+int main()
+{
+
+vector<int>v;
+cout<<"Capacity-->"<<v.capacity()<<endl;                    //capicity finds the memory allowcated to vector v
+
+v.push_back(1);                                            //to enter the elements to a vector from back
+cout<<"Capacity-->"<<v.capacity()<<endl;
+
+v.push_back(2);
+cout<<"Capacity-->"<<v.capacity()<<endl;
+
+v.push_back(3);
+cout<<"Capacity-->"<<v.capacity()<<endl;                         ------OUTPUT----- Capacity-->4
+cout<<"Size-->"<<v.size()<<endl;                                 ------OUTPUT----- Size-->3
+
+cout<<"Element at 2nd Index-->"<<v.at(2)<<endl;             //print the element at index 2
+cout<<"Empty or not-->"<<v.empty()<<endl;                   //tells whether a vector is empty or not(0-false;1-true)
+                                                                    
+cout<<"First element-->"<<v.front()<<endl;                  //prints the first element of a vector
+cout<<"Last element-->"<<v.back()<<endl;                    //prints the last element of a vector
+
+cout<<"before pop"<<endl;
+for(int i:v)
+{
+cout<<i<<" ";
+}cout<<endl;
+
+v.pop_back();                                               //to remove one element from the last
+cout<<"after pop"<<endl;
+for(int i:v)
+{
+cout<<i<<" ";
+}
+
+cout<<"Before clear size "<<v.size()<<endl;
+v.clear();                                                  //to remove all elements from vector v(but it's size becames 0 not capacity: Capacity remains as it is)
+cout<<"After clear size "<<v.size()<<endl;
+
+------------------------OUTPUT----------------------
+Capacity-->0
+Capacity-->1
+Capacity-->2
+Capacity-->4
+Size-->3
+before pop
+1 2 3 
+after pop
+1 2 
+Before clear size 2
+After clear size  0
