@@ -17,3 +17,13 @@ cout<<"Empty or not-->"<<a.empty()<<endl;                   //tells whether an a
 cout<<"First element-->"<<a.front()<<endl;                  //prints the first element of an array
 cout<<"Last element-->"<<a.back()<<endl;                    //prints the last element of an array
 }
+  
+------------------------OUTPUT----------------------
+1
+2
+3
+4
+Element at 2nd Index-->3
+Empty or not-->0
+First element-->1
+Last element-->4
