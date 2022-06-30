@@ -59,6 +59,10 @@ Capacity-->1
 Capacity-->2
 Capacity-->4
 Size-->3
+Element at 2nd Index-->3
+Empty or not-->0
+First element-->1
+Last element-->3
 before pop
 1 2 3 
 after pop
