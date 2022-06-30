@@ -5,8 +5,18 @@ using namespace std;
 int main()
 {
 
-vector<int>v;
-cout<<"Capacity-->"<<v.capacity()<<endl;                    //capicity finds the memory allowcated to vector v
+vector<int>v;                                               //declaring vector v
+
+vector<int> a(5,1);                                        //another method of initializing the vector(here vector a is of size 5 nd all elements are initialized by 1)
+
+vector<int> xyz(a);                                        //to copy all elements of vector a 
+cout<<"print xyz"<<endl;
+for(int i:xyz)
+{
+cout<<i<<" ";
+}cout<<endl;
+
+cout<<"Capacity-->"<<v.capacity()<<endl;                   //capicity finds the memory allowcated to vector v
 
 v.push_back(1);                                            //to enter the elements to a vector from back
 cout<<"Capacity-->"<<v.capacity()<<endl;
@@ -42,6 +52,8 @@ v.clear();                                                  //to remove all elem
 cout<<"After clear size "<<v.size()<<endl;
 
 ------------------------OUTPUT----------------------
+print xyz
+1 1 1 1 1
 Capacity-->0
 Capacity-->1
 Capacity-->2
