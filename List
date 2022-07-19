@@ -1,0 +1,40 @@
+#include <iostream>
+#include <list>
+using namespace std;
+
+int main()
+{
+    list<int> l;
+    
+    list<int> n(5,100);
+    cout<<"Printing n : "<<endl;
+    for(int i:n)
+    {
+        cout<<i<<" ";
+    }cout<<endl;
+    
+    l.push_back(20);
+    l.push_front(10);
+    for(int i:l)
+    {
+        cout<<i<<" ";
+    }cout<<endl;
+    
+    l.erase(l.begin());
+    cout<<"after erasing : ";
+    for(int i:l)
+    {
+        cout<<i<<" ";
+    }cout<<endl;
+    
+    cout<<"Size of the list : "<<l.size()<<endl;
+}
+
+------------------------OUTPUT----------------------
+Printing n --> 
+100 100 100 100 100 
+10 20 
+after erasing : 20 
+Size of the list : 1
+
+******TIME COMPLEXITY OF erase function is O(n) AND FOR OTHER FUNCTION IT IS O(1).******
