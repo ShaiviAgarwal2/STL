@@ -1,0 +1,44 @@
+#include <iostream>
+#include <deque>
+
+using namespace std;
+
+int main()
+{
+    deque<int> d;                                             //declaring deque
+    
+    d.push_back(2);                                           //to enter elements from back
+    d.push_front(1);                                          //to enter the elements from front
+    
+    for(int i:d)
+    {
+        cout<<i<<" ";
+    }cout<<endl;
+    
+    d.pop_back();                                              //to remove one element from back
+    d.pop_front();                                             //to remove one element from starting
+    for(int i:d)
+    {
+        cout<<i<<" ";
+    }cout<<endl;
+    
+    cout<<"Element at 1st Index :"<<d.at(1)<<endl;             //to print the element at 1st Index
+    cout<<"Empty or not :"<<d.empty()<<endl;                   //to check whether a deque is empty or not(0-->false; 1-->true)
+    
+    cout<<"First element-->"<<d.front()<<endl;                 //prints the first element of a deque
+    cout<<"Last element-->"<<d.back()<<endl;                   //prints the last element of a deque
+    
+    cout<<"Before erasing :"<<d.size()<<endl;
+    d.erase(d.begin(),d.begin()+1);                            //to erase the specific element from deque(means from begin to specified element excluding the begin element)
+    cout<<"After erasing :"<<d.size()<<endl;
+}
+
+
+------------------------OUTPUT----------------------
+1 2 
+Element at 1st Index :2
+Empty or not :0
+First element-->1
+Last element-->2
+Before erasing :2
+After erasing :1
