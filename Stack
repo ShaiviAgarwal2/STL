@@ -1,0 +1,28 @@
+                                                   STACK WORKS ON THE PRINCIPLE OF FIRST-IN, LAST-OUT.
+
+#include<iostream>
+#include<stack>
+
+using namespace std;
+int main()
+{
+stack<string> s;                               //declaring stack
+
+s.push("Hello");
+s.push("Shaivi");
+s.push("Agarwal");
+
+cout<<"Top Element : "<<s.top()<<endl;        //to print the top element of the stack(i.e. Agarwal)
+s.pop();                                      //poping out the last element which is Agarwal
+cout<<"Top Element : "<<s.top()<<endl;        //now output-- Shaivi 
+
+cout<<"Size of stack : "<<s.size()<<endl;
+cout<<"Empty or not : "<<s.empty()<<endl;
+}
+
+
+------------------------OUTPUT----------------------
+Top Element : Agarwal
+Top Element : Shaivi
+Size of stack : 2
+Empty or not : 0
